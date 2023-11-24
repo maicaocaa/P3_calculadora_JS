@@ -1,43 +1,55 @@
-//defino constantes para que objetengo de los id y clases del HTML
+//https://youtu.be/hZFEgkrOwks?si=JxXaNisRRonJbzyp
 
-const mainScreen = document.getElementById('main_screen');
-const calcScreen = document.getElementById('calc_screen');
-const numButton = document.querySelectorAll('.number');  // seleccina la clase
-const operatorButton = document.querySelectorAll ('.operator');
+const screen= document.querySelector(".main_screen");
+const accumul= document.querySelector(".calc_screen");
+const btnNumbers = document.querySelectorAll(".btn");
+console.log(btnNumbers);
+console.log(screen);
+console.log(screen.textContent);
 
-
-// defino clase para funciones de calculo
-class Calculator {  
-         plus (num1, num2){
-            return num1 + num2;
-        };
-
-         minus (num1, num2){
-            return num1 - num2;
-        };
-         divide (num1, num2){
-            return num1 / num2;
-        };
-         multi (num1, num2){
-            return num1 * num2;
-        };
-         rest (num1, num2){
-            return num1 % num2;
-        };
-
-    };
-
-const calculator = new Calculator();
+btnNumbers.forEach(boton => {
+    boton.addEventListener("click", () => {
+        const btnPressed = boton.textContent;
+        console.log(btnPressed);
+        console.log(screen.textContent);
 
 
-console.log(calculator.plus(1, 2));
-// console.log(calculator.minus(1, 2));
-// console.log(calculator.divide(1, 2));
-// console.log(calculator.multi(1, 2));
-// console.log(calculator.rest(1, 2));
+        if (boton.id === "C"){
+            screen.textContent="0";
+            return;
+        }
 
-const btn = document.querySelector("button");
+        if (boton.id === "del") {
+            if (screen.textContent.length === 1 || screen.textContent === "Error") {
+                screen.textContent="0";
+            } else {
+            screen.textContent=screen.textContent.slice(0, -1);
+            }
+            return;
+        }
+       
+        if(boton.id==="equal"){
 
-btn.addEventListener("click", ()=> {
-    console.log ('presion boton')
-})
+          if( screen.textContent === "Error")  {
+            screen.textContent="Error";
+          } else {
+                try{  
+                    screen.textContent = eval(screen.textContent);
+                }catch{
+                    screen.textContent="Error";
+                }}
+            return;
+        }
+
+
+        if(screen.textContent === "0"|| screen.textContent === "Error") {
+            screen.textContent = btnPressed;
+        } else {
+            screen.textContent += btnPressed;
+        }
+    });
+});
+
+
+
+
