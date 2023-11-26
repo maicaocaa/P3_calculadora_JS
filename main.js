@@ -1,23 +1,21 @@
-//https://youtu.be/hZFEgkrOwks?si=JxXaNisRRonJbzyp
-
 const screen= document.querySelector(".main_screen");
-const accumul= document.querySelector(".calc_screen");
+const accumul= document.querySelector(".accum_screen");
 const btnNumbers = document.querySelectorAll(".btn");
-console.log(btnNumbers);
-console.log(screen);
-console.log(screen.textContent);
 
 btnNumbers.forEach(boton => {
     boton.addEventListener("click", () => {
         const btnPressed = boton.textContent;
+        let acummulated;
         console.log(btnPressed);
         console.log(screen.textContent);
 
 
-        if (boton.id === "C"){
+        if (boton.id === "C") {
             screen.textContent="0";
+            accumul.textContent="0";
             return;
         }
+
 
         if (boton.id === "del") {
             if (screen.textContent.length === 1 || screen.textContent === "Error") {
@@ -49,7 +47,3 @@ btnNumbers.forEach(boton => {
         }
     });
 });
-
-
-
-

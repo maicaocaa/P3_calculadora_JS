@@ -24,18 +24,13 @@ body {
   color: #fff6a9;
   font-size: calc(2.5em + 1vw);
   margin: 0px;
+  grid-column: 1 / 5;
 }
 
-
-.calculator {
-  max-width: 100vh;
-  display:grid;
-  grid-template-columns:repeat(4, 1fr) ;
-  gap:0.7vh;
-  padding:1.5vh;
+.choco_style {
   background: #764720;
   background-image: linear-gradient(120deg, rgba(217,180,152,.5) 5%, transparent);
-  border-top:3px solid var(--chocolate);
+  border-top:3px solid #552f10 );
   border-right:7px solid #39210D;
   border-bottom:7px solid #241505;
   border-left:7px solid #402712;
@@ -45,61 +40,47 @@ body {
 }
 
 
+.calculator {
+  max-width: 100vh;
+  display:grid;
+  grid-template-columns:repeat(4, 1fr) ;
+  gap:0.7vh;
+  padding:1.5vh;
+}
+
+
 .main_screen {
    grid-column: 1 / 5;
-   background-color:#764720 ;
    font-size: calc(2em + 1vw);
    text-align: right;
    margin-bottom: 1vh;
    padding-right:1vh;
-   background-image: linear-gradient(120deg, rgba(217,180,152,.5) 5%, transparent);
-   border-top:3px solid var(--chocolate);
-   border-right:7px solid #39210D;
-   border-bottom:7px solid #241505;
-   border-left:7px solid #402712;
-   box-shadow:inset 0vh 0.5vh 0vh rgba(255,255,255,0.15),
-     0vh 0.5vh 1vh black;
+   width: 48vh;
+   margin-top:1vh;
 }  
 
-.calc_screen {
+.accum_screen {
   grid-column: 1 / 5;
-  background-color: #764720;
   font-size: calc(1em + 1vw);
   text-align: right;
   margin-bottom: 0.2vh;
   padding-right:1vh;
-  background-image: linear-gradient(120deg, rgba(217,180,152,.5) 5%, transparent);
-  border-top:3px solid var(--chocolate);
-  border-right:7px solid #39210D;
-  border-bottom:7px solid #241505;
-  border-left:7px solid #402712;
-  box-shadow:inset 0vh 0.5vh 0vh rgba(255,255,255,0.15),
-    0vh 0.5vh 1vh black;
 }  
 
 #equal{
   grid-column: 3 / 5;
-  height: 10vh;
-  width: 20vh;
+  border-radius: 10%;
+  text-align: center;
+  font-size: calc(1em + 1vw);
 }
 
-  button {
+  .btn {
     height: 10vh;
-    width: 12vh;
+    /* width: 12vh; */
     border-radius: 20%;
     text-align: center;
     font-size: calc(1em + 1vw);
-    background: #764720;
-    background-image: linear-gradient(120deg, rgba(217,180,152,.5) 5%, transparent);
-    border-top:3px solid var(--chocolate);
-    border-right:7px solid #39210D;
-    border-bottom:7px solid #241505;
-    border-left:7px solid #402712;
-    box-shadow:inset 0vh 0.5vh 0vh rgba(255,255,255,0.15),
-      0vh 0.5vh 1vh black;
-    color:#D7AD65;
   } 
-
 
  button:hover {
     background-color:#4B2E17;
@@ -109,7 +90,7 @@ body {
   
   button:active {
     border-color:#170D03 #341F0F #5F391F #311F0D;
-    font-size: 2.9vh;
+    font-size: calc(1.2em + 1vw);
   }
 
     
