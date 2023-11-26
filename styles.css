@@ -25,6 +25,7 @@ body {
   font-size: calc(2.5em + 1vw);
   margin: 0px;
   grid-column: 1 / 5;
+  text-align: center;
 }
 
 .choco_style {
