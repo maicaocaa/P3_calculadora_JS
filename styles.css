@@ -22,7 +22,7 @@ body {
   /* transform: skewY(3.5deg) scaleX(0.78) translateY(-10%);  */
   text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500,  0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
   color: #fff6a9;
-  font-size: calc(2.5em + 1vw);
+  font-size: calc(2em + 1vw);
   margin: 0px;
   grid-column: 1 / 5;
   text-align: center;
@@ -47,6 +47,7 @@ body {
   grid-template-columns:repeat(4, 1fr) ;
   gap:0.7vh;
   padding:1.5vh;
+  margin-top: 2vh;
 }
 
 
@@ -57,7 +58,8 @@ body {
    margin-bottom: 1vh;
    padding-right:1vh;
    width: 48vh;
-   margin-top:1vh;
+   margin-top:3vh;
+   margin-bottom:3vh;
 }  
 
 .accum_screen {
